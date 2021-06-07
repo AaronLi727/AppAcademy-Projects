@@ -1,0 +1,49 @@
+class Recursion
+    def sum_to(n)
+        if n == 1
+            return 1
+        end
+        if n < 1
+            return nill
+        end
+        n + sum_to(n-1)
+    end
+
+    def add_numbers(nums_array)
+        if nums_array.length == 1
+            return nums_array[0]
+        end
+        if nums_array.length < 1
+            return nil
+        end
+        result += nums_array[0] + add_numbers(nums_array[1..-1])
+    end
+
+    def gamma_fnc(n)
+        if n == 1
+            return 1
+        end
+        if n < 1
+            return nil
+        end
+        (n-1) * gamma_fnc(n-1)
+    end
+
+    def ice_cream_shop(flavors, favorite)
+        if flavors.length == 0 
+            return false
+        end
+        if flavors[0] != favorite
+            ice_cream_shop(flavors[1..-1],favorite)
+        else
+            return true
+        end
+    end
+
+    def reverse(string)
+        if string.length == 0
+            return ""
+        end
+        reverse(string[1..-1]) + string[0]
+    end
+end
